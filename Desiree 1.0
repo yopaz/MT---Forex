@@ -1,0 +1,21 @@
+# Desiree 1.0
+
+Entry:
+
+- system 1: long when CLOSE > 20-day high, short when CLOSE < 20-day low
+- system 2: long when CLOSE > 55-day high, short when CLOSE < 55-day low
+
+every 0.5ATR(20) add a position up to 4
+
+Exit:
+
+- system 1: close long positions when CLOSE < 10-day low, close short positions when CLOSE > 10-day high
+- system 2: close long positions when CLOSE < 20-day low, close short positions when CLOSE > 20-day high
+
+Hard SL: 2ATR(20)
+Stops move higher/lower 0.5ATR(20) for every long/short position added
+
+risk 2 % per trade
+amount to bet in lots = (risk*account balance) / (SL*contract size)
+
+for the x-day highs/lows we use the Donchain channel indicator
